@@ -4,20 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ryan Sheridan Johnson</title>
-<meta name="description" content="Ryan Sheridan Johnson. People call him RJ. A letter from Oregon City.">
+<meta name="description" content="Ryan Sheridan Johnson. People call him RJ. Oregon City.">
 <meta name="author" content="Ryan Sheridan Johnson">
 <link rel="canonical" href="https://ryansheridanjohnson.com/">
 <meta property="og:title" content="Ryan Sheridan Johnson">
-<meta property="og:description" content="A letter from Oregon City. People call him RJ.">
+<meta property="og:description" content="Oregon City. People call him RJ.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ryansheridanjohnson.com/">
-<meta property="og:image" content="https://ryansheridanjohnson.com/assets/letter-still.jpg">
+<meta property="og:image" content="https://ryansheridanjohnson.com/assets/vessel.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FAF6EF'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='14' fill='%23B4643C'%3ERJ%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FAF6EF'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='13' fill='%23B4643C'%3ERJ%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="tokens.css">
 <style>
-/* Hallmark · genre: editorial · macrostructure: Letter · theme: house
- * nav: N9 · footer: Ft6 · enrichment: quiet still */
+/* Hallmark · genre: editorial · macrostructure: Photographic · theme: house
+ * nav: N6 · footer: Ft1 · enrichment: still-life + quiet loop */
 
 html, body { overflow-x: clip; }
 html { background: var(--color-paper); }
@@ -31,224 +31,253 @@ body {
   line-height: 1.62;
   font-optical-sizing: auto;
   font-variant-numeric: oldstyle-nums;
-  padding-inline: max(var(--page-gutter), env(safe-area-inset-left));
   padding-bottom: max(var(--space-xl), env(safe-area-inset-bottom));
 }
 
-a {
-  color: var(--color-accent);
-  text-underline-offset: 0.18em;
+a { color: var(--color-accent); text-underline-offset: 0.18em; }
+a:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
+
+.nav-mast {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xl) var(--page-gutter) var(--space-md);
+  text-align: center;
 }
 
-a:focus-visible {
-  outline: 3px solid var(--color-focus);
-  outline-offset: 3px;
+.mast-line {
+  margin: 0;
+  font-size: var(--text-sm);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-mute);
+  white-space: nowrap;
 }
 
-.nav-edge {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: var(--space-sm);
-  padding-block: var(--space-lg);
-  max-width: 72rem;
-  min-width: 0;
-  flex-wrap: wrap;
-}
-
-.wordmark {
+.mast-name {
+  margin: 0;
   font-family: var(--font-display);
   font-style: normal;
-  font-weight: 600;
-  font-size: var(--text-md);
-  letter-spacing: -0.02em;
-  color: var(--color-ink);
-  text-decoration: none;
-  white-space: nowrap;
-  margin: 0;
+  font-weight: 400;
+  font-size: var(--text-display);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  overflow-wrap: anywhere;
   min-width: 0;
+  max-width: 12em;
 }
 
-.place {
+.mast-rj {
+  margin: 0;
+  font-style: italic;
   color: var(--color-mute);
+}
+
+.mast-nav a {
+  display: inline-block;
+  margin-top: var(--space-xs);
+  text-decoration: none;
+  color: var(--color-terracotta);
+  white-space: nowrap;
+  border-bottom: 1px solid var(--color-terracotta);
+  padding-bottom: 1px;
+}
+.mast-nav a:hover { color: var(--color-ink); border-color: var(--color-ink); }
+
+.mast-rule {
+  width: min(42rem, 100%);
+  border: 0;
+  height: 4px;
+  margin: var(--space-sm) 0 0;
+  border-top: var(--rule);
+  border-bottom: var(--rule);
+}
+
+.photo-fold {
+  position: relative;
+  margin: 0;
+}
+
+.stage {
+  position: relative;
+  perspective: 1400px;
+  overflow: clip;
+  background: var(--color-paper-2);
+}
+
+.bleed-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  min-width: 0;
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transform-style: preserve-3d;
+  transition: transform 480ms var(--ease-out);
+}
+
+.bleed {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 480ms var(--ease-out);
+}
+
+.caption {
+  position: absolute;
+  left: var(--page-gutter);
+  bottom: var(--space-md);
+  margin: 0;
+  color: var(--color-ink);
+  background: oklch(97.2% 0.012 85 / 0.9);
   font-size: var(--text-sm);
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  padding: 0.35em 0.7em;
   white-space: nowrap;
-  min-width: 0;
 }
 
-.letter {
-  max-width: min(var(--measure), 100%);
-  padding-block: var(--space-2xl) var(--space-xl);
+.text-fold {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--page-gutter);
   min-width: 0;
   overflow-wrap: anywhere;
 }
 
-.dateline {
-  color: var(--color-mute);
-  font-size: var(--text-sm);
-  margin: 0 0 var(--space-xl);
-}
-
-.salutation {
-  font-style: italic;
-  font-size: var(--text-lg);
-  margin: 0 0 var(--space-lg);
-}
-
-.letter p {
-  margin: 0 0 var(--space-lg);
-}
-
-.letter h2 {
-  font-family: var(--font-display);
-  font-style: normal;
-  font-weight: 600;
-  font-size: clamp(1.5rem, 6vw + 0.4rem, var(--text-xl));
-  letter-spacing: -0.03em;
-  line-height: 1.15;
-  overflow-wrap: anywhere;
-  min-width: 0;
-  margin: 0 0 var(--space-lg);
-}
+.text-fold p { margin: 0 0 var(--space-lg); }
 
 .pull {
   font-family: var(--font-display);
   font-style: italic;
   color: var(--color-accent);
   font-size: var(--text-md);
-  line-height: 1.4;
-  margin: var(--space-xl) 0;
-  max-width: 36ch;
+  line-height: 1.35;
+  max-width: 28ch;
 }
 
-.orn {
-  text-align: center;
-  color: var(--color-sage);
-  letter-spacing: 0.6em;
-  margin: var(--space-2xl) 0;
-  font-size: var(--text-sm);
-}
+.cite { font-style: italic; }
+.doi { overflow-wrap: anywhere; word-break: break-word; }
 
-figure.still {
-  margin: var(--space-2xl) 0;
-  max-width: min(36rem, 100%);
-  min-width: 0;
-}
-
-figure.still img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border: var(--rule);
-}
-
-figcaption {
-  color: var(--color-mute);
-  font-size: var(--text-sm);
-  margin-top: var(--space-xs);
-}
-
-.doi {
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
-
-.foot-letter {
-  max-width: min(var(--measure), 100%);
-  padding-block: var(--space-xl) var(--space-3xl);
+.foot-mast {
+  padding: var(--space-2xl) var(--page-gutter) var(--space-3xl);
   border-top: var(--rule);
-  min-width: 0;
-  overflow-wrap: anywhere;
-}
-
-.foot-letter__close {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: var(--text-lg);
-  line-height: 1.4;
-  margin: 0;
-}
-
-.foot-letter__sign {
-  font-style: normal;
-  font-weight: 600;
-}
-
-.foot-letter__ps {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  align-items: baseline;
+  max-width: 72rem;
+  margin: 0 auto;
   color: var(--color-mute);
   font-size: var(--text-sm);
-  margin: var(--space-md) 0 0;
-  max-width: 42ch;
 }
-
-@media (min-width: 60rem) {
-  .letter, .foot-letter, .nav-edge {
-    margin-inline-start: 12vw;
-  }
-}
-
-@media (max-width: 22rem) {
-  .place { letter-spacing: 0.04em; }
-}
+.foot-mast a { overflow-wrap: anywhere; }
 
 @media (prefers-reduced-motion: reduce) {
+  .bleed { display: none; }
+  .bleed-img { transform: none; transition: none; }
   *, *::before, *::after {
     animation-duration: 150ms !important;
     transition-duration: 150ms !important;
   }
 }
-</style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Ryan Sheridan Johnson",
-  "alternateName": "RJ",
-  "url": "https://ryansheridanjohnson.com/",
-  "email": "mailto:rj@ryansheridanjohnson.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Oregon City",
-    "addressRegion": "OR",
-    "addressCountry": "US"
-  }
+
+@media (max-width: 22rem) {
+  .mast-line { letter-spacing: 0.06em; }
 }
-</script>
+</style>
 </head>
 <body>
-<header class="nav-edge">
-  <h1 class="wordmark">RJ</h1>
-  <span class="place">Oregon City</span>
+<header class="nav-mast">
+  <p class="mast-line">Oregon City</p>
+  <h1 class="mast-name">Ryan Sheridan Johnson</h1>
+  <p class="mast-rj">People call me RJ</p>
+  <nav class="mast-nav" aria-label="Write">
+    <a href="mailto:rj@ryansheridanjohnson.com">Write</a>
+  </nav>
+  <hr class="mast-rule" aria-hidden="true">
 </header>
 
-<article class="letter">
-  <p class="dateline">24 August 2026</p>
-  <p class="salutation">Friend,</p>
-  <h2>My name is Ryan Sheridan Johnson. People call me RJ.</h2>
-  <p>This is the page I want you to land on. Not a shop window. Not a list of what I built. A letter from a man you can find.</p>
-  <p>I have been in the people business my whole life. A suit and a door at five. A new school every year after that. The rooms changed — software, kitchens, roofs, air. The work never did. You sit with someone. You read them. You tell the truth. You close, or you walk.</p>
-  <p>This year the big shops started selling a teammate that lives on their computer. You message it. They keep the house. I got tired of renting a mind.</p>
-  <p class="pull">The wolf is fed by its legs. The problem was never the power. It was the cable.</p>
-  <p>I do not sell a teammate. I offer a man a way to keep his own — and still pick up the phone.</p>
-  <p>A builder looked at the work this spring and said it was the most thought-out architecture he had seen. He was not being kind. He was being precise.</p>
-  <p class="orn" aria-hidden="true">* * *</p>
-  <p>If you want the long paper — <cite>Sun-to-Token</cite>, version 3.2 — it lives at the DOI:</p>
-  <p><a class="doi" href="https://doi.org/10.5281/zenodo.22083896">https://doi.org/10.5281/zenodo.22083896</a></p>
-  <figure class="still">
+<section class="photo-fold">
+  <div class="stage" data-tilt>
+    <video
+      class="bleed"
+      poster="assets/vessel.jpg"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      width="960"
+      height="720">
+      <source src="assets/vessel.mp4" type="video/mp4">
+    </video>
     <img
-      src="assets/letter-still.jpg"
+      class="bleed-img"
+      src="assets/vessel.jpg"
       width="1152"
       height="864"
-      alt="Cream paper and a terracotta cup on a wooden table in late light.">
-    <figcaption>Oregon City. The page is the door.</figcaption>
-  </figure>
-</article>
+      alt="A terracotta vessel in a cream room, late light, a long shadow."
+      fetchpriority="high">
+  </div>
+  <p class="caption">The room.</p>
+</section>
 
-<footer class="foot-letter">
-  <p class="foot-letter__close">Yours,<br><span class="foot-letter__sign">RJ</span></p>
-  <p class="foot-letter__ps">P.S. — Write me at <a href="mailto:rj@ryansheridanjohnson.com">rj@ryansheridanjohnson.com</a>.</p>
+<section class="text-fold">
+  <p>I have been in the people business my whole life. A suit and a door at five. A new school every year after that. The rooms changed. The work never did.</p>
+  <p class="pull">The wolf is fed by its legs. The problem was never the power. It was the cable.</p>
+  <p>I do not sell a teammate. I offer a man a way to keep his own — and still pick up the phone.</p>
+</section>
+
+<section class="photo-fold">
+  <img
+    class="bleed-img"
+    src="assets/table.jpg"
+    width="1280"
+    height="720"
+    alt="A brass compass, cream paper, and a terracotta cup on a wooden table."
+    loading="lazy">
+  <p class="caption">The table.</p>
+</section>
+
+<section class="text-fold">
+  <p>If you want the long paper — <cite class="cite">Sun-to-Token</cite>, version 3.2 — it lives at the DOI:</p>
+  <p><a class="doi" href="https://doi.org/10.5281/zenodo.22083896">https://doi.org/10.5281/zenodo.22083896</a></p>
+</section>
+
+<footer class="foot-mast">
+  <span>RJ · Oregon City</span>
+  <a href="mailto:rj@ryansheridanjohnson.com">rj@ryansheridanjohnson.com</a>
 </footer>
+
+<script>
+(function () {
+  var stage = document.querySelector("[data-tilt]");
+  if (!stage) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  if (window.matchMedia("(pointer: coarse)").matches) return;
+  var media = stage.querySelectorAll(".bleed, .bleed-img");
+  if (!media.length) return;
+  function setTilt(rx, ry) {
+    media.forEach(function (el) {
+      el.style.setProperty("--ry", ry);
+      el.style.setProperty("--rx", rx);
+    });
+  }
+  stage.addEventListener("pointermove", function (e) {
+    var r = stage.getBoundingClientRect();
+    var x = (e.clientX - r.left) / r.width - 0.5;
+    var y = (e.clientY - r.top) / r.height - 0.5;
+    setTilt((-y * 4).toFixed(2) + "deg", (x * 6).toFixed(2) + "deg");
+  });
+  stage.addEventListener("pointerleave", function () {
+    setTilt("0deg", "0deg");
+  });
+})();
+</script>
 </body>
 </html>
