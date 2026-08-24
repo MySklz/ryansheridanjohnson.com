@@ -91,6 +91,23 @@ a:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
 .object { margin: 0; background: #000; }
 .object img { width: 100%; height: auto; display: block; min-width: 0; }
 
+.portrait {
+  margin: 0 auto;
+  max-width: 36rem;
+  padding: 0 var(--page-gutter) var(--space-3xl);
+}
+.portrait img {
+  width: 100%;
+  height: auto;
+  display: block;
+  min-width: 0;
+}
+.portrait figcaption {
+  margin-top: var(--space-sm);
+  font-size: var(--text-sm);
+  color: var(--color-mute);
+}
+
 .letter {
   max-width: 52ch;
   margin: 0 auto;
@@ -160,6 +177,11 @@ a:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
   <p>I'll write here when I have something worth saying. If this letter found you, write back: <a href="mailto:rj@ryansheridanjohnson.com">rj@ryansheridanjohnson.com</a></p>
   <p class="close">Yours,<br><span class="sign">RJ</span></p>
 </article>
+
+<figure class="portrait">
+  <img src="assets/rj_delana_coast.jpg" width="768" height="1024" alt="RJ and his bride, Delana." loading="lazy">
+  <figcaption>RJ and his bride, Delana</figcaption>
+</figure>
 
 <figure class="object">
   <img src="assets/helix.jpg" width="1280" height="720" alt="A double helix of living tissue and circuitry rising from dark ground." loading="lazy">

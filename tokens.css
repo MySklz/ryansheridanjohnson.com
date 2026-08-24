@@ -56,7 +56,7 @@
   --space-3xl: 6rem;
   --page-gutter: clamp(1.25rem, 5vw, 4rem);
   --text-sm: 0.9rem;
-  --text-base: 1.125rem;
+  --text-base: 1.25rem;
   --text-md: 1.4rem;
   --text-lg: 1.65rem;
   --text-display: clamp(2.1rem, 5.5vw + 0.4rem, 4.2rem);
