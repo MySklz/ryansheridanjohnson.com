@@ -2,20 +2,20 @@
  * Hallmark · genre: atmospheric · macrostructure: Marquee Hero · theme: custom
  * vibe: midnight gold nature-helix · paper: dark · display: classical-serif · accent: warm-gold
  * nav: N9 · footer: Ft2 · enrichment: nature loop + helix still
- * no Jireh · fonts: self-hosted Cinzel + Newsreader */
+ * no Jireh · fonts: self-hosted Cormorant + Newsreader */
 
 @font-face {
-  font-family: "Cinzel";
-  src: url("fonts/cinzel-400.woff2") format("woff2");
-  font-weight: 400;
+  font-family: "Cormorant Garamond";
+  src: url("fonts/cormorant-500.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Cinzel";
-  src: url("fonts/cinzel-600.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
+  font-family: "Cormorant Garamond";
+  src: url("fonts/cormorant-500-italic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
   font-display: swap;
 }
 @font-face {
@@ -43,7 +43,7 @@
   --color-cyan: oklch(78% 0.11 210);
   --color-violet: oklch(68% 0.12 310);
   --color-focus: oklch(82% 0.13 85);
-  --font-display: "Cinzel", ui-serif, Georgia, serif;
+  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
   --font-body: "Newsreader", ui-serif, Georgia, serif;
   --space-3xs: 0.125rem;
   --space-2xs: 0.25rem;

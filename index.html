@@ -88,44 +88,54 @@ a:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
 .object img { width: 100%; height: auto; display: block; min-width: 0; }
 
 .bio {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(9rem, 14rem);
-  gap: var(--space-xl);
+  display: flex;
+  flex-wrap: wrap;
   align-items: start;
+  gap: var(--space-xl);
   max-width: 64rem;
   margin: 0 auto;
   padding: var(--space-3xl) var(--page-gutter);
 }
 .letter {
+  flex: 1 1 28rem;
   min-width: 0;
   overflow-wrap: anywhere;
   max-width: 52ch;
 }
 .orb {
+  flex: 0 0 11rem;
+  width: 11rem;
   margin: 0;
-  position: sticky;
-  top: var(--space-xl);
-  justify-self: end;
-  width: min(14rem, 100%);
+  order: -1;
+  position: relative;
 }
 .orb img {
-  width: 100%;
-  aspect-ratio: 1;
+  width: 11rem;
+  height: 14rem;
   object-fit: cover;
-  object-position: 50% 30%;
+  object-position: 50% 28%;
   display: block;
-  border-radius: 50%;
-  -webkit-mask-image: radial-gradient(circle, #000 52%, transparent 76%);
-  mask-image: radial-gradient(circle, #000 52%, transparent 76%);
-  box-shadow: 0 0 0 1px oklch(82% 0.13 85 / 0.45);
+  border-radius: 1.15rem;
+}
+.orb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1.15rem;
+  box-shadow: inset 0 0 28px 12px var(--color-paper);
+  pointer-events: none;
 }
 .orb figcaption {
   margin-top: var(--space-sm);
   font-size: var(--text-sm);
   color: var(--color-mute);
-  text-align: center;
 }
-.letter .salute { font-style: italic; margin: 0 0 var(--space-lg); }
+.letter .salute {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-xl);
+  margin: 0 0 var(--space-lg);
+}
 .letter p { margin: 0 0 var(--space-lg); color: var(--color-ink); }
 .letter .close {
   font-family: var(--font-display);
@@ -151,16 +161,14 @@ a:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
 
 .doi { word-break: break-word; }
 
-@media (max-width: 48rem) {
-  .bio {
-    grid-template-columns: 1fr;
-  }
-  .orb {
-    position: static;
-    justify-self: start;
-    width: 8.5rem;
-    order: -1;
-  }
+@media (max-width: 40rem) {
+  .bio { flex-direction: column; }
+  .orb { flex-basis: 7.5rem; width: 7.5rem; }
+  .orb img { width: 7.5rem; height: 9.5rem; }
+}
+@media (min-width: 40.01rem) and (max-width: 60rem) {
+  .orb { flex-basis: 9rem; width: 9rem; }
+  .orb img { width: 9rem; height: 11.5rem; }
 }
 </style>
 </head>
