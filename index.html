@@ -62,10 +62,6 @@ a:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
 .stage img {
   width: 100%; height: 100%; object-fit: cover; display: block;
 }
-.stage video {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%; object-fit: cover;
-}
 .veil {
   position: absolute; inset: 0;
   background: linear-gradient(to top, oklch(8% 0.01 280 / 0.88) 0%, transparent 45%);
@@ -91,29 +87,43 @@ a:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
 .object { margin: 0; background: #000; }
 .object img { width: 100%; height: auto; display: block; min-width: 0; }
 
-.portrait {
+.bio {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(9rem, 14rem);
+  gap: var(--space-xl);
+  align-items: start;
+  max-width: 64rem;
   margin: 0 auto;
-  max-width: 36rem;
-  padding: 0 var(--page-gutter) var(--space-3xl);
+  padding: var(--space-3xl) var(--page-gutter);
 }
-.portrait img {
-  width: 100%;
-  height: auto;
-  display: block;
+.letter {
   min-width: 0;
+  overflow-wrap: anywhere;
+  max-width: 52ch;
 }
-.portrait figcaption {
+.orb {
+  margin: 0;
+  position: sticky;
+  top: var(--space-xl);
+  justify-self: end;
+  width: min(14rem, 100%);
+}
+.orb img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: 50% 30%;
+  display: block;
+  border-radius: 50%;
+  -webkit-mask-image: radial-gradient(circle, #000 52%, transparent 76%);
+  mask-image: radial-gradient(circle, #000 52%, transparent 76%);
+  box-shadow: 0 0 0 1px oklch(82% 0.13 85 / 0.45);
+}
+.orb figcaption {
   margin-top: var(--space-sm);
   font-size: var(--text-sm);
   color: var(--color-mute);
-}
-
-.letter {
-  max-width: 52ch;
-  margin: 0 auto;
-  padding: var(--space-3xl) var(--page-gutter);
-  min-width: 0;
-  overflow-wrap: anywhere;
+  text-align: center;
 }
 .letter .salute { font-style: italic; margin: 0 0 var(--space-lg); }
 .letter p { margin: 0 0 var(--space-lg); color: var(--color-ink); }
@@ -141,8 +151,16 @@ a:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
 
 .doi { word-break: break-word; }
 
-@media (prefers-reduced-motion: reduce) {
-  .stage video { display: none; }
+@media (max-width: 48rem) {
+  .bio {
+    grid-template-columns: 1fr;
+  }
+  .orb {
+    position: static;
+    justify-self: start;
+    width: 8.5rem;
+    order: -1;
+  }
 }
 </style>
 </head>
@@ -155,9 +173,6 @@ a:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
 <section class="marquee">
   <div class="stage">
     <img src="assets/eden.jpg" width="1280" height="720" alt="A living tree sending gold and cyan strands over Earth toward the sun." fetchpriority="high">
-    <video autoplay muted loop playsinline preload="metadata" poster="assets/eden.jpg" width="1280" height="720">
-      <source src="assets/eden.mp4" type="video/mp4">
-    </video>
     <div class="veil" aria-hidden="true"></div>
   </div>
   <div class="marquee-copy">
@@ -165,6 +180,7 @@ a:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
   </div>
 </section>
 
+<section class="bio">
 <article class="letter">
   <p class="salute">Hi, I'm RJ.</p>
   <p>I've never punched a clock. Almost thirty years running my own business on straight commission — and that's a different kind of life. You don't get the opportunity to be complacent. My office was my vehicle. My desk was somebody's kitchen table. You come alongside a person's vision. You learn, you love, you engage. And you live in the space of rejection, constantly — which is exactly where the business owners live, the operators, the people I've spent my life helping build.</p>
@@ -176,11 +192,11 @@ a:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
   <p>I'll write here when I have something worth saying. If this letter found you, write back: <a href="mailto:rj@ryansheridanjohnson.com">rj@ryansheridanjohnson.com</a></p>
   <p class="close">Yours,<br><span class="sign">RJ</span></p>
 </article>
-
-<figure class="portrait">
-  <img src="assets/rj_delana_coast.jpg" width="768" height="1024" alt="RJ and his bride, Delana." loading="lazy">
-  <figcaption>RJ and his bride, Delana</figcaption>
+<figure class="orb">
+  <img src="assets/rj_delana_coast.jpg" width="768" height="1024" alt="RJ and Delana." loading="lazy">
+  <figcaption>RJ and Delana</figcaption>
 </figure>
+</section>
 
 <figure class="object">
   <img src="assets/helix.jpg" width="1280" height="720" alt="A double helix of living tissue and circuitry rising from dark ground." loading="lazy">
