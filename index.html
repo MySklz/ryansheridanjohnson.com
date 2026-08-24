@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ryan Sheridan Johnson</title>
+<meta name="description" content="Ryan Sheridan Johnson. People call him RJ. A letter from Oregon City.">
+<meta name="author" content="Ryan Sheridan Johnson">
+<link rel="canonical" href="https://ryansheridanjohnson.com/">
+<meta property="og:title" content="Ryan Sheridan Johnson">
+<meta property="og:description" content="A letter from Oregon City. People call him RJ.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ryansheridanjohnson.com/">
+<meta property="og:image" content="https://ryansheridanjohnson.com/assets/letter-still.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FAF6EF'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='14' fill='%23B4643C'%3ERJ%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="tokens.css">
+<style>
+/* Hallmark · genre: editorial · macrostructure: Letter · theme: house
+ * nav: N9 · footer: Ft6 · enrichment: quiet still */
+
+html, body { overflow-x: clip; }
+html { background: var(--color-paper); }
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.62;
+  font-optical-sizing: auto;
+  font-variant-numeric: oldstyle-nums;
+  padding-inline: max(var(--page-gutter), env(safe-area-inset-left));
+  padding-bottom: max(var(--space-xl), env(safe-area-inset-bottom));
+}
+
+a {
+  color: var(--color-accent);
+  text-underline-offset: 0.18em;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.nav-edge {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-sm);
+  padding-block: var(--space-lg);
+  max-width: 72rem;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 600;
+  font-size: var(--text-md);
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+  text-decoration: none;
+  white-space: nowrap;
+  margin: 0;
+  min-width: 0;
+}
+
+.place {
+  color: var(--color-mute);
+  font-size: var(--text-sm);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.letter {
+  max-width: min(var(--measure), 100%);
+  padding-block: var(--space-2xl) var(--space-xl);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.dateline {
+  color: var(--color-mute);
+  font-size: var(--text-sm);
+  margin: 0 0 var(--space-xl);
+}
+
+.salutation {
+  font-style: italic;
+  font-size: var(--text-lg);
+  margin: 0 0 var(--space-lg);
+}
+
+.letter p {
+  margin: 0 0 var(--space-lg);
+}
+
+.letter h2 {
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 6vw + 0.4rem, var(--text-xl));
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+  min-width: 0;
+  margin: 0 0 var(--space-lg);
+}
+
+.pull {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-accent);
+  font-size: var(--text-md);
+  line-height: 1.4;
+  margin: var(--space-xl) 0;
+  max-width: 36ch;
+}
+
+.orn {
+  text-align: center;
+  color: var(--color-sage);
+  letter-spacing: 0.6em;
+  margin: var(--space-2xl) 0;
+  font-size: var(--text-sm);
+}
+
+figure.still {
+  margin: var(--space-2xl) 0;
+  max-width: min(36rem, 100%);
+  min-width: 0;
+}
+
+figure.still img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: var(--rule);
+}
+
+figcaption {
+  color: var(--color-mute);
+  font-size: var(--text-sm);
+  margin-top: var(--space-xs);
+}
+
+.doi {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.foot-letter {
+  max-width: min(var(--measure), 100%);
+  padding-block: var(--space-xl) var(--space-3xl);
+  border-top: var(--rule);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.foot-letter__close {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-lg);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.foot-letter__sign {
+  font-style: normal;
+  font-weight: 600;
+}
+
+.foot-letter__ps {
+  color: var(--color-mute);
+  font-size: var(--text-sm);
+  margin: var(--space-md) 0 0;
+  max-width: 42ch;
+}
+
+@media (min-width: 60rem) {
+  .letter, .foot-letter, .nav-edge {
+    margin-inline-start: 12vw;
+  }
+}
+
+@media (max-width: 22rem) {
+  .place { letter-spacing: 0.04em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 150ms !important;
+    transition-duration: 150ms !important;
+  }
+}
+</style>
+</head>
+<body>
+<header class="nav-edge">
+  <h1 class="wordmark">RJ</h1>
+  <span class="place">Oregon City</span>
+</header>
+
+<article class="letter">
+  <p class="dateline">24 August 2026</p>
+  <p class="salutation">Friend,</p>
+  <h2>My name is Ryan Sheridan Johnson. People call me RJ.</h2>
+  <p>This is the page I want you to land on. Not a shop window. Not a list of what I built. A letter from a man you can find.</p>
+  <p>I have been in the people business my whole life. A suit and a door at five. A new school every year after that. The rooms changed — software, kitchens, roofs, air. The work never did. You sit with someone. You read them. You tell the truth. You close, or you walk.</p>
+  <p>This year the big shops started selling a teammate that lives on their computer. You message it. They keep the house. I got tired of renting a mind.</p>
+  <p class="pull">The wolf is fed by its legs. The problem was never the power. It was the cable.</p>
+  <p>I do not sell a teammate. I offer a man a way to keep his own — and still pick up the phone.</p>
+  <p>A builder looked at the work last year and said it was the most thought-out architecture he had seen. He was not being kind. He was being precise.</p>
+  <p class="orn" aria-hidden="true">* * *</p>
+  <p>If you want the long paper — <cite>Sun-to-Token</cite>, version 3.2 — it lives at the DOI:</p>
+  <p><a class="doi" href="https://doi.org/10.5281/zenodo.22083896">https://doi.org/10.5281/zenodo.22083896</a></p>
+  <figure class="still">
+    <img
+      src="assets/letter-still.jpg"
+      width="1152"
+      height="864"
+      alt="Cream paper and a terracotta cup on a wooden table in late light.">
+    <figcaption>Oregon City. The page is the door.</figcaption>
+  </figure>
+</article>
+
+<footer class="foot-letter">
+  <p class="foot-letter__close">Yours,<br><span class="foot-letter__sign">RJ</span></p>
+  <p class="foot-letter__ps">P.S. — The mailbox is not hung yet. When I have an address, it will live on this page. Until then, this letter is the door.</p>
+</footer>
+</body>
+</html>

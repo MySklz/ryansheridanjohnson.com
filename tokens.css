@@ -1,0 +1,71 @@
+/* Hallmark · pre-emit critique: P5 H5 E4 S5 R5 V5
+ * Hallmark · genre: editorial · macrostructure: Letter · theme: house (Jul 12 cream/terracotta/sage)
+ * tone: editorial · audience: stranger at the name · use: know this man is real
+ * anchor hue: terracotta · enrichment: quiet still (Imagine, faceless)
+ * nav: N9 Edge-aligned · footer: Ft6 Letter close
+ * paper: light · display: high-contrast-serif · accent: warm
+ * fonts: self-hosted Fraunces + Newsreader (OFL) — no Google CDN */
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("fonts/fraunces-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Newsreader";
+  src: url("fonts/newsreader-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Newsreader";
+  src: url("fonts/newsreader-400-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --color-paper: oklch(97.2% 0.012 85);
+  --color-paper-2: oklch(94.8% 0.018 82);
+  --color-ink: oklch(27% 0.018 70);
+  --color-mute: oklch(48% 0.02 80);
+  --color-terracotta: oklch(55% 0.12 48);
+  --color-accent: var(--color-terracotta);
+  --color-sage: oklch(64% 0.038 148);
+  --color-navy: oklch(38% 0.04 250);
+  --color-focus: oklch(55% 0.12 48);
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Newsreader", ui-serif, Georgia, serif;
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 9rem;
+  --page-gutter: clamp(1.25rem, 5vw, 4rem);
+  --text-sm: 0.9rem;
+  --text-base: 1.125rem;
+  --text-md: 1.4rem;
+  --text-lg: 1.5625rem;
+  --text-xl: 1.9531rem;
+  --text-display: clamp(2.4rem, 4vw + 0.6rem, 3.4rem);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+  --rule: 1px solid oklch(64% 0.038 148 / 0.45);
+  --radius: 2px;
+  --measure: 50ch;
+}
