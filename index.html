@@ -4,24 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ryan Sheridan Johnson</title>
-<meta name="description" content="Ryan Sheridan Johnson — people, information, energy. Lifelong closer. Author of Sun-to-Token, a full-chain energy accounting standard for AI infrastructure.">
+<meta name="description" content="Ryan Sheridan Johnson, Oregon City. I've never punched a clock. Twenty-seven years on straight commission at the kitchen table. Author of Sun-to-Token.">
 <meta name="author" content="Ryan Sheridan Johnson">
 <link rel="canonical" href="https://ryansheridanjohnson.com/">
-<meta property="og:title" content="Ryan Sheridan Johnson">
-<meta property="og:description" content="People, information, energy — I study how it all comes together. Author of Sun-to-Token. Carbon-based creativity, silicon-based intelligence.">
+<meta property="og:title" content="Ryan Sheridan Johnson — I've never punched a clock.">
+<meta property="og:description" content="Twenty-seven years on straight commission. I close at kitchen tables, I train the people who sit at them, and I build the systems that carry the training.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ryansheridanjohnson.com/">
-<meta property="og:image" content="https://ryansheridanjohnson.com/assets/kitchen-film-poster.png">
+<meta property="og:image" content="https://ryansheridanjohnson.com/assets/rj_delana_water.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Ryan Sheridan Johnson","alternateName":"RJ","url":"https://ryansheridanjohnson.com/","email":"mailto:rj@ryansheridanjohnson.com","jobTitle":"Systems operator; Author, Sun-to-Token","description":"People, information, energy — I study how it all comes together. Author of Sun-to-Token, a full-chain energy accounting standard for AI infrastructure.","sameAs":["https://www.linkedin.com/in/ryansheridanjohnson","https://zenodo.org/records/22083896","https://doi.org/10.5281/zenodo.22083896"],"address":{"@type":"PostalAddress","addressLocality":"Oregon City","addressRegion":"OR","addressCountry":"US"}}
+{"@context":"https://schema.org","@type":"Person","name":"Ryan Sheridan Johnson","alternateName":"RJ","url":"https://ryansheridanjohnson.com/","email":"mailto:rj@ryansheridanjohnson.com","jobTitle":"Closer; Trainer; Systems Architect; Author, Sun-to-Token","description":"I've never punched a clock. Twenty-seven years on straight commission at the kitchen table. Author of Sun-to-Token.","sameAs":["https://www.linkedin.com/in/ryansheridanjohnson","https://zenodo.org/records/22083896","https://doi.org/10.5281/zenodo.22083896"],"address":{"@type":"PostalAddress","addressLocality":"Oregon City","addressRegion":"OR","addressCountry":"US"}}
 </script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0a0c'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-size='12' fill='%23e4c36a'%3ERJ%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="tokens.css">
 <style>
-/* Hallmark · genre: atmospheric · macrostructure: Marquee Hero · theme: custom black-gold
- * nav: N9 · footer: Ft2 · enrichment: Eden loop + helix still · no Jireh */
-
+/* Nov 5 2026 — the sales letter. Headline is RJ's own line (Ghost's pick); the form is direct
+ * response (RJ's pin). No film: the lamp is a 144KB still. Proof in a ruled strip, not cards.
+ * Black paper, gold ink, Cormorant + Newsreader, self-hosted (tokens.css). */
 html, body { overflow-x: clip; }
 html { background: var(--color-paper); }
 body {
@@ -30,206 +30,183 @@ body {
   color: var(--color-ink);
   font-family: var(--font-body);
   font-size: var(--text-base);
-  line-height: 1.62;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
+::selection { background: oklch(82% 0.13 85 / 0.35); color: var(--color-ink); }
 a { color: var(--color-gold); text-underline-offset: 0.18em; }
+a:hover { color: oklch(90% 0.12 85); }
 a:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
+.serif { font-family: var(--font-display); }
+.gutter { padding-left: var(--page-gutter); padding-right: var(--page-gutter); }
 
+/* header: the lamp, darkened, with the hook over it */
+.hero { position: relative; overflow: hidden; background: #000; }
+.hero img.still {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: center 45%; opacity: .55;
+}
+.hero .veil {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, oklch(8% 0.01 280 / 0.2) 0%, oklch(8% 0.01 280 / 0.75) 55%, var(--color-paper) 100%);
+}
 .bar {
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: var(--space-lg) var(--page-gutter);
-  font-family: var(--font-display);
-  font-size: var(--text-sm);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-gold);
+  position: relative; display: flex; justify-content: space-between; align-items: center;
+  padding-top: var(--space-lg); padding-bottom: var(--space-lg);
+  font-family: var(--font-display); font-size: var(--text-sm);
+  letter-spacing: .16em; text-transform: uppercase;
 }
-.bar a { text-decoration: none; color: var(--color-ink); white-space: nowrap; }
+.bar a { text-decoration: none; color: var(--color-ink); }
+.bar a:first-child { color: var(--color-gold); }
 .bar a:hover { color: var(--color-gold); }
+.hook {
+  position: relative; max-width: 64rem; min-width: 0; box-sizing: border-box; width: 100%;
+  padding-top: var(--space-3xl); padding-bottom: var(--space-2xl);
+  display: flex; flex-direction: column; gap: var(--space-lg);
+}
+.eyebrow {
+  margin: 0; font-family: var(--font-display); font-size: var(--text-sm);
+  letter-spacing: .18em; text-transform: uppercase; color: var(--color-mute);
+}
+h1 {
+  margin: 0; font-family: var(--font-display); font-weight: 500;
+  font-size: clamp(3rem, 7.5vw, 6rem); line-height: 1; color: var(--color-gold);
+  max-width: 14ch; text-wrap: balance;
+}
+.deck {
+  margin: 0; font-family: var(--font-display); font-style: italic;
+  font-size: clamp(1.35rem, 2.4vw, 1.9rem); line-height: 1.3; max-width: 36ch; text-wrap: pretty;
+}
+.door { display: flex; flex-wrap: wrap; gap: var(--space-md) var(--space-lg); align-items: center; margin-top: var(--space-xs); }
+.btn {
+  display: inline-block; padding: 1rem 2rem; border-radius: 3px;
+  background: var(--color-gold); color: var(--color-paper); text-decoration: none;
+  font-family: var(--font-display); font-weight: 500; font-size: 1.15rem;
+  letter-spacing: .12em; text-transform: uppercase;
+}
+.btn:hover { background: oklch(90% 0.12 85); color: var(--color-paper); }
+.aside { font-family: var(--font-display); font-style: italic; font-size: 1.15rem; color: var(--color-mute); }
 
-.marquee {
-  position: relative;
-  min-height: 100dvh;
-  display: grid;
-  align-items: end;
+/* proof strip */
+.proof {
+  display: flex; flex-wrap: wrap;
+  border-top: var(--rule); border-bottom: var(--rule);
 }
-.stage { position: absolute; inset: 0; overflow: clip; background: #000; }
-.stage img {
-  width: 100%; height: 100%; object-fit: cover; display: block;
+.proof div {
+  flex: 1 1 160px; min-width: 0;
+  padding: var(--space-lg) var(--space-md) var(--space-lg) 0;
+  display: flex; flex-direction: column; gap: var(--space-2xs);
+  border-right: 1px solid oklch(82% 0.13 85 / 0.2);
 }
-.stage video {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%; object-fit: cover;
+.proof div:last-child { border-right: 0; }
+.proof b {
+  font-family: var(--font-display); font-weight: 500; font-size: 2.6rem; line-height: 1; color: var(--color-gold);
 }
-.veil {
-  position: absolute; inset: 0;
-  background: linear-gradient(to top, oklch(8% 0.01 280 / 0.88) 0%, transparent 45%);
-  pointer-events: none;
-}
-.marquee-copy {
-  position: relative;
-  z-index: 1;
-  padding: var(--space-2xl) var(--page-gutter);
-  min-width: 0;
-}
-.marquee-copy h1 {
-  margin: 0;
-  font-family: var(--font-display);
-  font-style: normal;
-  font-weight: 400;
-  font-size: clamp(1.5rem, 2.4vw + 0.8rem, 2.4rem);
-  letter-spacing: 0.08em;
-  line-height: 1.2;
-  color: var(--color-gold);
-}
-.marquee-copy .tagline {
-  margin: var(--space-sm) 0 0;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: var(--text-base);
-  letter-spacing: 0.04em;
-  color: var(--color-ink);
-}
-
-.object { margin: 0; background: #000; }
-.object img { width: 100%; height: auto; display: block; min-width: 0; }
-
-.bio {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: start;
-  gap: var(--space-xl);
-  max-width: 64rem;
-  margin: 0 auto;
-  padding: var(--space-3xl) var(--page-gutter);
-}
-.letter {
-  flex: 1 1 28rem;
-  min-width: 0;
-  overflow-wrap: anywhere;
-  max-width: 52ch;
-}
-.orb {
-  flex: 0 0 11rem;
-  width: 11rem;
-  margin: 0;
-  order: -1;
-  position: relative;
-}
-.orb img {
-  width: 11rem;
-  height: 14rem;
-  object-fit: cover;
-  object-position: 50% 28%;
-  display: block;
-  border-radius: 1.15rem;
-}
-.orb::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 1.15rem;
-  box-shadow: inset 0 0 28px 12px var(--color-paper);
-  pointer-events: none;
-}
-.orb figcaption {
-  margin-top: var(--space-sm);
-  font-size: var(--text-sm);
-  color: var(--color-mute);
-}
-.letter .salute {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: var(--text-xl);
-  margin: 0 0 var(--space-lg);
-}
-.letter p { margin: 0 0 var(--space-lg); color: var(--color-ink); }
-.letter .close {
-  font-family: var(--font-display);
-  font-style: italic;
-  color: var(--color-gold);
-  margin: var(--space-xl) 0 0;
-}
-.letter .sign {
-  font-style: normal;
-  letter-spacing: 0.08em;
-}
-
-.foot {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: var(--space-md);
-  padding: var(--space-xl) var(--page-gutter) var(--space-3xl);
-  font-size: var(--text-sm);
-  color: var(--color-mute);
-}
-.foot a { overflow-wrap: anywhere; }
-
-.doi { word-break: break-word; }
-
-@media (prefers-reduced-motion: reduce) {
-  .stage video { display: none; }
-}
-
+.proof span { font-size: var(--text-sm); line-height: 1.35; color: var(--color-mute); }
 @media (max-width: 40rem) {
-  .bio { flex-direction: column; }
-  .orb { flex-basis: 7.5rem; width: 7.5rem; }
-  .orb img { width: 7.5rem; height: 9.5rem; }
+  .proof div { flex-basis: 45%; border-right: 0; border-bottom: 1px solid oklch(82% 0.13 85 / 0.2); }
+  .proof div:nth-last-child(-n+1) { border-bottom: 0; }
 }
-@media (min-width: 40.01rem) and (max-width: 60rem) {
-  .orb { flex-basis: 9rem; width: 9rem; }
-  .orb img { width: 9rem; height: 11.5rem; }
+
+/* two doors */
+.who {
+  padding-top: var(--space-3xl); padding-bottom: var(--space-2xl);
+  display: flex; flex-wrap: wrap; gap: var(--space-2xl) var(--space-3xl); justify-content: center;
 }
+.who section { flex: 1 1 min(22rem, 100%); min-width: 0; max-width: 46ch; display: flex; flex-direction: column; gap: var(--space-sm); }
+h2 { margin: 0; font-family: var(--font-display); font-weight: 500; font-size: 2rem; line-height: 1.1; color: var(--color-gold); }
+.who p { margin: 0; }
+
+/* the letter */
+.letter {
+  padding-top: var(--space-xl); padding-bottom: var(--space-3xl);
+  display: flex; flex-wrap: wrap; gap: var(--space-2xl); justify-content: center; align-items: flex-start;
+}
+.letter figure { margin: 0; flex: 0 0 16rem; width: 16rem; max-width: 100%; display: block; position: sticky; top: var(--space-xl); align-self: flex-start; }
+.letter figure img { width: 100%; height: auto; border-radius: 3px; display: block; margin-bottom: var(--space-sm); }
+figcaption { font-family: var(--font-display); font-style: italic; font-size: 1.05rem; color: var(--color-mute); }
+.letter article { flex: 1 1 min(var(--measure), 100%); max-width: var(--measure); min-width: 0; display: flex; flex-direction: column; gap: var(--space-lg); }
+.hero, .who, .letter, footer, .hook, .door { min-width: 0; max-width: 100%; box-sizing: border-box; }
+.eyebrow, .deck, h1, .aside, .who p, .letter p { overflow-wrap: anywhere; }
+.letter p { margin: 0; }
+.letter .hi { font-style: italic; color: var(--color-mute); }
+.sign { font-family: var(--font-display); font-style: italic; font-size: 1.7rem; color: var(--color-gold); line-height: 1.25; margin-top: var(--space-md) !important; }
+.ps { margin-top: var(--space-md) !important; padding-top: var(--space-lg); border-top: var(--rule); }
+.ps b { font-weight: 500; color: var(--color-gold); }
+@media (max-width: 48rem) { .letter figure { position: static; flex-basis: 10.5rem; } }
+
+footer {
+  border-top: var(--rule);
+  padding-top: var(--space-lg); padding-bottom: var(--space-lg);
+  display: flex; flex-wrap: wrap; gap: var(--space-md) var(--space-lg); justify-content: space-between;
+  font-family: var(--font-display); font-size: var(--text-sm); letter-spacing: .08em; color: var(--color-mute);
+}
+footer a { text-decoration: none; }
+footer span { display: flex; flex-wrap: wrap; gap: var(--space-lg); }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 </head>
 <body>
-<header class="bar">
-  <span>RJ</span>
-  <a href="mailto:rj@ryansheridanjohnson.com">Write</a>
+
+<header class="hero">
+  <img class="still" src="assets/lamp-still.jpg" alt="" aria-hidden="true" width="1600" height="900" fetchpriority="high">
+  <div class="veil"></div>
+  <nav class="bar gutter" aria-label="Site">
+    <a href="/">RJ</a>
+    <a href="mailto:rj@ryansheridanjohnson.com">Write</a>
+  </nav>
+  <div class="hook gutter">
+    <p class="eyebrow">From the kitchen table of Ryan Sheridan Johnson &middot; Oregon City, Oregon</p>
+    <h1>I've never punched a clock.</h1>
+    <p class="deck">Twenty-seven years on straight commission. I close at kitchen tables, I train the people who sit at them, and I build the systems that carry the training. The letter is below.</p>
+    <div class="door">
+      <a class="btn" href="mailto:rj@ryansheridanjohnson.com">Write to RJ</a>
+      <span class="aside">I answer every email myself.</span>
+    </div>
+  </div>
 </header>
 
-<section class="marquee">
-  <div class="stage">
-    <img src="assets/kitchen-film-poster.png" width="1280" height="720" alt="A wooden kitchen table at night, lit by one oil lamp." fetchpriority="high">
-    <video autoplay muted loop playsinline preload="metadata" poster="assets/kitchen-film-poster.png" width="1280" height="720">
-      <source src="assets/kitchen-film.mp4" type="video/mp4">
-    </video>
-    <div class="veil" aria-hidden="true"></div>
+<main>
+  <div class="who gutter" style="border-top: var(--rule)">
+    <section>
+      <h2>If you run a shop</h2>
+      <p>You don't need another rep. You need the one who closes at the table and makes the next rep better. I sell by teaching: the bill, the system, the financing, the rebates, then I let the homeowner decide. My process became the team standard at two companies because I train by working next to people, not from a whiteboard. Straight commission my whole career. I eat what I kill.</p>
+    </section>
+    <section>
+      <h2>If you found the paper</h2>
+      <p>Sun-to-Token asks one question: what does it cost, in sunlight, when a machine thinks? I wrote the chain down from the source to the delivered token, ran it past a second frontier model before release, and printed every correction instead of hiding it. <a href="https://doi.org/10.5281/zenodo.22083896">Zenodo, DOI 10.5281/zenodo.22083896</a>. Slice it up. I welcome it.</p>
+    </section>
   </div>
-  <div class="marquee-copy">
-    <h1>Ryan Sheridan Johnson</h1>
-    <p class="tagline">People, information, energy &mdash; I study how it all comes together.</p>
+
+  <div class="letter gutter">
+    <figure>
+      <img src="assets/rj_delana_water.jpg" width="768" height="1024" alt="RJ and Delana by the water." loading="lazy">
+      <figcaption>RJ and Delana</figcaption>
+    </figure>
+    <article>
+      <h2>The letter</h2>
+      <p class="hi">Hi, I'm RJ.</p>
+      <p>I've never punched a clock. Twenty-seven years on straight commission &mdash; and that's a different kind of life. You don't get the opportunity to be complacent. My office was my vehicle. My desk was wherever the decision was being made: a family's kitchen table, an owner's boardroom, an engineering office at JPL. Personal budgets, government budgets, financing structures from utility programs to bank lending. Different rooms, same work &mdash; you come alongside a person's vision. You learn, you love, you engage. And you live in the space of rejection, constantly, which is exactly where owners and operators live &mdash; the people I've spent my life helping build.</p>
+      <p>I've been a builder even longer. At fourteen I was pulling plumbing in my family's manufacturing shop &mdash; water systems for commercial aquariums running on Omron programmable controllers, two thousand gallons an hour through stainless steel frames, pumps, carbon filters, thermoplastic welds I laid myself. Ever since, whenever the work turned repetitive, I built a tool &mdash; some way to multiply my time and my energy. In 2024 the technology finally caught up with the habit, and I went down the road. I learn, I build, I break, I ask, I test, I engage.</p>
+      <p>So at fifty I'm in a strange place: a lifelong closer doing systems architecture, audits, energy, and papers &mdash; because now I can. The people business turned out to be the information business. The information business turned out to be the energy business. Nothing new under the sun.</p>
+      <p>So I started measuring the sun. What does it cost, in sunlight, when a machine thinks? I wrote down what I found. It's called Sun-to-Token: <a href="https://doi.org/10.5281/zenodo.22083896">doi.org/10.5281/zenodo.22083896</a></p>
+      <p>Life is my canvas. And the goal underneath all of it is simple to say and long to build: to be a bridge between carbon-based creativity and silicon-based intelligence.</p>
+      <p>If this letter found you, write back: <a href="mailto:rj@ryansheridanjohnson.com">rj@ryansheridanjohnson.com</a></p>
+      <p class="sign">In success,<br>RJ</p>
+      <p class="ps"><b>P.S.</b> Everything on this page is a number I can show you or a thing I built. Nothing here is a hobby. If you want the resume, the numbers behind the numbers, or the system behind the paper, write and I'll walk you through it myself.</p>
+      <p><a class="btn" href="mailto:rj@ryansheridanjohnson.com">Write to RJ</a></p>
+    </article>
   </div>
-</section>
+</main>
 
-<section class="bio">
-<article class="letter">
-  <p class="salute">Hi, I'm RJ.</p>
-  <p>I've never punched a clock. Almost thirty years on straight commission — and that's a different kind of life. You don't get the opportunity to be complacent. My desk was wherever the decision was being made: a family's kitchen table, an owner's boardroom, an engineering office at JPL. Personal budgets, government budgets, interstate acquisition contracts, financing structures from utility programs to bank lending. Different rooms, same work — you come alongside a person's vision. You learn, you love, you engage. And you live in the space of rejection, constantly, which is exactly where owners and operators live — the people I've spent my life helping build.</p>
-  <p>I've been a builder even longer. At fourteen I was pulling plumbing in my family's manufacturing shop — water systems for commercial aquariums running on Omron programmable controllers, two thousand gallons an hour through stainless steel frames, pumps, carbon filters, thermoplastic welds I laid myself. Ever since, whenever the work turned repetitive, I built a tool — some way to multiply my time and my energy. In 2024 the technology finally caught up with the habit, and I went down the road. I learn, I build, I break, I ask, I test, I engage.</p>
-  <p>So at fifty I'm in a strange place: a lifelong closer doing systems architecture, audits, energy, and papers — because now I can. The people business turned out to be the information business. The information business turned out to be the energy business. Nothing new under the sun.</p>
-  <p>So I started measuring the sun. What does it cost, in sunlight, when a machine thinks? I wrote down what I found. It's called Sun-to-Token:</p>
-  <p><a class="doi" href="https://doi.org/10.5281/zenodo.22083896">https://doi.org/10.5281/zenodo.22083896</a></p>
-  <p>Life is my canvas. And the goal underneath all of it is simple to say and long to build: to be a bridge between carbon-based creativity and silicon-based intelligence.</p>
-  <p>I'll write here when I have something worth saying. If this letter found you, write back: <a href="mailto:rj@ryansheridanjohnson.com">rj@ryansheridanjohnson.com</a></p>
-  <p class="close">In success,<br><span class="sign">RJ</span></p>
-</article>
-<figure class="orb">
-  <img src="assets/rj_delana_coast.jpg" width="768" height="1024" alt="RJ and Delana." loading="lazy">
-  <figcaption>RJ and Delana</figcaption>
-</figure>
-</section>
-
-<footer class="foot">
-  <span>Oregon City</span>
-  <a href="https://www.linkedin.com/in/ryansheridanjohnson" rel="me">LinkedIn</a>
-  <a href="mailto:rj@ryansheridanjohnson.com">rj@ryansheridanjohnson.com</a>
+<footer class="gutter">
+  <span>Oregon City, Oregon</span>
+  <span>
+    <a href="https://www.linkedin.com/in/ryansheridanjohnson" rel="me">LinkedIn</a>
+    <a href="https://doi.org/10.5281/zenodo.22083896">Sun-to-Token</a>
+    <a href="mailto:rj@ryansheridanjohnson.com">rj@ryansheridanjohnson.com</a>
+  </span>
 </footer>
+
 </body>
 </html>
